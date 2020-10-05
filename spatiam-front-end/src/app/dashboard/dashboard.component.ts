@@ -64,7 +64,7 @@ export class DashboardComponent implements OnInit {
   changeActiveMessage($event) {
     this.userData = $event;
 
-    let blob = new Blob([this.userData], {type: "json;charset=utf-8"});
-    FileSaver.saveAs(blob, "test.txt");
+    let blob = new Blob([JSON.stringify(this.userData)], {type: "text/plain;charset=utf-8"});
+    FileSaver.saveAs(blob, "metadata.txt");
   }
 }

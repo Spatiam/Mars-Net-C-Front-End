@@ -13,13 +13,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import * as FileSaver from 'file-saver';
+import { WebcamModule } from 'ngx-webcam';
 
 // Custom components
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ContactsComponent } from './dashboard/contacts/contacts.component';
 import { MessagesComponent } from './dashboard/messages/messages.component';
-import { CameraComponent } from './dashboard/camera/camera.component';
-import { FileUploadComponent } from './dashboard/file-upload/file-upload.component';
+import { CameraComponent } from './dashboard/messages/camera/camera.component';
+import { FileUploadComponent } from './dashboard/messages/file-upload/file-upload.component';
 
 const appRoutes: Routes = [
   {
@@ -62,6 +63,7 @@ const appRoutes: Routes = [
     MatInputModule,
     HttpClientModule,
     FormsModule,
+    WebcamModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
