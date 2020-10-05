@@ -1,0 +1,48 @@
+<section class="container" fxLayout="column">
+    <div fxFlex class="message-section">
+        <div class="message-title-card">
+            <h1>Messsaging {{currentUser}}</h1>
+        </div>
+        <div class="message-container">
+            <mat-card *ngFor="let message of userMessages" [ngClass]="{'inbound-message': message.sender === 0, 'outbound-message': message.sender === 1}">
+                <mat-card-content *ngIf="message.type === 'M'; else elseMessage">
+                    <p>{{message.content}}</p>
+                </mat-card-content>
+                <ng-template #elseMessage><p><a href="#" style="color: white">***File***</a></p></ng-template>
+                <mat-card-footer>
+                    <table>
+                        <tr>
+                            <td class="text-right">Time sent: </td>
+                            <td>{{message.time_sent}}</td>
+                        </tr>
+                        <tr *ngIf="message.time_read === '0000'; else elseTime">
+                            <td class="text-right">Time received: </td>
+                            <td>{{message.time_received}}</td>
+                        </tr>
+                        <ng-template #elseTime>
+                            <td class="text-right">Time read:</td>
+                            <td>{{message.time_read}}</td>
+                        </ng-template>
+                    </table>
+                </mat-card-footer>
+            </mat-card>
+
+        </div>
+        <div class="textbox-footer-section">
+            <div class="text-box-section" fxLayout="row">
+                <mat-form-field appearance="outline" class="textbox" fxFlex="grow">
+                    <mat-label>Message...</mat-label>
+                    <input matInput [(ngModel)]="textMessageValue">
+                </mat-form-field>
+                <button class="text-send-btn" mat-flat-button (click)="sendMessage()" [disabled]="textMessageValue === undefined && !currentUser !== undefined">Send</button>
+            </div>
+            <div class="tools-section">
+                <div class="cam-upload-section" fxLayout="row" fxLayoutAlign="center center">
+                    <button class="open-camera-btn" mat-flat-button>Open Camera</button>
+                    <button class="upload-file-btn" mat-flat-button>Upload Fileos
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

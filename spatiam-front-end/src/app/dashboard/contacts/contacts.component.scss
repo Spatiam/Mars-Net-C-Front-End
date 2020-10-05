@@ -1,0 +1,57 @@
+.container {
+    height: calc(100vh - 96px);
+}
+
+.contacts-title-card {
+    background-color: #222;
+    width: 100%;
+    border-radius: 4px;
+
+    h1 {
+        padding: 10px;
+        font-size: 24px;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-style: italic;
+        text-align: center;
+    }
+}
+
+mat-card {
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    background-color: #111;
+}
+
+    mat-card-title {
+        font-size: 18px;
+    }
+
+    .active {
+        background-color: #ddd;
+        color: #000;
+    }
+
+mat-card-footer {
+    font-size: 12px;
+    text-align: right;
+    padding-right: 4px;
+}
+
+    .available-contact {
+        color: green;
+        font-weight: 600;
+    }
+
+
+button {
+    width: calc(25% - 12px);
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: green;
+    position: absolute;
+    bottom: 24px;
+}

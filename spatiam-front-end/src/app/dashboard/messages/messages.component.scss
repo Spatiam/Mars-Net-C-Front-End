@@ -1,0 +1,97 @@
+.container {
+    height: calc(100vh - 96px);
+}
+
+.message-section {
+    max-height: 100vh;
+}
+
+.message-title-card {
+    background-color: #222;
+    width: 100%;
+    border-radius: 4px;
+
+    h1 {
+        padding: 10px;
+        font-size: 24px;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-style: italic;
+        text-align: center;
+    }
+}
+
+.message-container {
+    background-color: #222;
+    padding-top: 6px;
+    width: 100%;
+    overflow: auto;
+    height: calc(100vh - 304px);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+mat-card {
+    max-width: 60%;
+    margin: 12px;
+}
+
+    .inbound-message {
+        background-color: #777;
+    }
+
+    .outbound-message {
+        background-color: #327bc9;
+        align-items: flex-start;
+        width: auto;
+        margin-right: 12px;
+        margin-left: auto;
+    }
+
+    .small-message-block {
+        max-width: 30%;
+    }
+
+    table {
+        width: auto;
+        margin-right: 0px;
+        margin-left: auto;
+        font-size: 11px;
+        font-weight: 600;
+    }
+
+    td {
+        padding-right: 4px;
+    }
+
+.textbox-footer-section {
+    background-color: #222;
+    padding-top: 12px;
+    border-top: 1px solid #555;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+    .text-box-section {
+        margin: 0 12px 12px;
+        height: 50px;
+    }
+
+        .textbox {
+            width: calc(95% - 24px);
+        }
+
+        .text-send-btn {
+            margin-top: 3.5px;
+            margin-left: 12px;
+            margin-right: 0px;
+            background-color: #327bc9;
+            height: 100%;
+        }
+
+    .tools-section {
+        margin-top: 12px;
+    }
+        button {
+            margin: 12px;
+        }

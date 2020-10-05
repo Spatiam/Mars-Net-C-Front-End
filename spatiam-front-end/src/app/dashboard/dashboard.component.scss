@@ -1,0 +1,15 @@
+.title-bar,
+.main-container {
+    width: calc(100vw - 48px);
+
+    h1 {
+        font-size: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-style: italic;
+    }
+}
+
+.title-bar {
+    margin-top: 24px;
+}

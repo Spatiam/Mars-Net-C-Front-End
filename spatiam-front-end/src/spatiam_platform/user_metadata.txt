@@ -1,0 +1,8 @@
+[
+    {
+        "user_name": "Martin Witcroft",
+        "location": "Jezero Crater",
+        "comms_status": "available",
+        "comms_battery": "67%",
+    }
+]

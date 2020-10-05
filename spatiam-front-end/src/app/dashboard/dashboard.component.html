@@ -1,0 +1,11 @@
+<div class="container" fxLayout="column" fxLayoutAlign="space-between center">
+    <section class="title-bar" fxLayout="row">
+        <h1 fxFlex="35" fxLayoutAlign="start">Spatiam Platform</h1>
+        <h1 fxFlex="30" fxLayoutAlign="center">Mars Ion Node</h1>
+        <span fxLayoutAlign="end"></span>
+    </section>
+    <section class="main-container" fxLayout="row" fxLayoutGap="24px">
+        <app-contacts [userData]="userData" (contactData)="changeActiveContact($event)" fxFlex="25"></app-contacts>
+        <app-messages [userData]="userData" (messageData)="changeActiveMessage($event)" fxFlex="75"></app-messages>
+    </section>
+</div>

@@ -1,0 +1,16 @@
+<section class="container" fxLayoutAlign="stretch">
+    <div fxFlex>
+        <div class="contacts-title-card">
+            <h1>Contacts</h1>
+        </div>
+        <mat-card *ngFor="let contact of userData" (click)=setActive(contact) [ngClass]="{'active': contact.is_chosen}">
+            <mat-card-title>{{contact.user}}</mat-card-title>
+            <mat-card-content>Location: {{contact.location}}</mat-card-content>
+            <mat-card-footer>
+                <div *ngIf="contact.is_local; else elseBlock" class="available-contact">Available</div>
+                <ng-template #elseBlock>Estimated time to delivery: {{contact.delay}}</ng-template>
+            </mat-card-footer>
+        </mat-card>
+    </div>
+    <button mat-flat-button style="cursor:default">Comms Operational</button>
+</section>
