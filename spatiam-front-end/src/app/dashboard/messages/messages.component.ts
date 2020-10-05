@@ -1,4 +1,6 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, Inject } from '@angular/core';
+import { MatDialog, MatDialogRef, MatDialogConfig, } from '@angular/material/dialog';
+import {WebcamImage, WebcamInitError, WebcamUtil} from 'ngx-webcam';
 
 @Component({
   selector: 'app-messages',
@@ -14,7 +16,9 @@ export class MessagesComponent implements OnInit {
   currentUser = '';
   textMessageValue: any;
 
-  constructor() { }
+  constructor(
+    public dialog: MatDialog
+  ) { }
 
   ngOnInit(): void {
   }
@@ -66,4 +70,23 @@ export class MessagesComponent implements OnInit {
     return t;
   }
 
+  // openVideoCapture() {
+  //   let config = new MatDialogConfig();
+  //   let dialogRef: MatDialogRef<VideoCaptureDialog> = this.dialog.open(VideoCaptureDialog, config);
+  // }
+
 }
+
+// @Component({
+//   selector: 'video-capture-dialog',
+//   template: '<webcam></webcam>',
+// })
+// export class VideoCaptureDialog {
+//   constructor (
+//     public dialogRef: MatDialogRef<VideoCaptureDialog>
+//   ) {}
+
+//   onNoClick(): void {
+//     this.dialogRef.close();
+//   }
+// }

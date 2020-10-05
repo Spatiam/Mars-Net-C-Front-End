@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WebcamModule } from 'ngx-webcam';
 
 @Component({
   selector: 'app-camera',

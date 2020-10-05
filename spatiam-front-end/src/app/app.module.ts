@@ -14,6 +14,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import * as FileSaver from 'file-saver';
 import { WebcamModule } from 'ngx-webcam';
+import { MatDialogModule } from '@angular/material/dialog';
 
 // Custom components
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -24,7 +25,7 @@ import { FileUploadComponent } from './dashboard/messages/file-upload/file-uploa
 
 const appRoutes: Routes = [
   {
-    path: 'spatium-platform',
+    path: 'spatiam-platform',
     component: DashboardComponent,
     children: [
       {
@@ -37,7 +38,7 @@ const appRoutes: Routes = [
       }
     ],
   },
-  { path: '', redirectTo: '/spatium-platform', pathMatch: 'full' },
+  { path: '', redirectTo: '/spatiam-platform', pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -64,6 +65,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     FormsModule,
     WebcamModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
